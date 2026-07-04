@@ -1,0 +1,93 @@
+.authPage {
+  width: 100%;
+}
+
+.authPage__wrap {
+  min-height: calc(100vh - 80px);
+  padding: 56px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.authPage__card {
+  width: 100%;
+  max-width: 520px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid rgba(15, 23, 42, 0.08);
+  border-radius: 18px;
+  box-shadow: 0 18px 50px rgba(2, 6, 23, 0.12);
+  padding: 28px;
+  backdrop-filter: blur(10px);
+}
+
+.authPage__header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 18px;
+}
+
+.authPage__title {
+  margin: 0;
+  font-weight: 850;
+  font-size: 22px;
+}
+
+.authPage__subtitle {
+  color: rgba(15, 23, 42, 0.65);
+  font-size: 13px;
+}
+
+.authPage__badge {
+  padding: 8px 12px;
+  border-radius: 999px;
+  background: rgba(37, 99, 235, 0.08);
+  border: 1px solid rgba(37, 99, 235, 0.16);
+  color: rgba(37, 99, 235, 0.95);
+  font-weight: 800;
+  letter-spacing: 0.2px;
+  font-size: 12px;
+}
+
+.authPage__form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.authPage__actions {
+  margin-top: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.authPage__note {
+  color: rgba(15, 23, 42, 0.5);
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.authPage__switch {
+  margin-top: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: rgba(15, 23, 42, 0.65);
+  font-size: 13px;
+}
+
+.authPage__switchLink {
+  color: var(--primary);
+  cursor: pointer;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.authPage__switchLink:hover {
+  color: var(--primary-dark);
+}
+

@@ -1,0 +1,66 @@
+@import '../../../../styles/landing/variables';
+
+.section {
+  padding: 72px 0;
+}
+
+.container {
+  @include container;
+}
+
+title.title {
+  margin: 0;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 44px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
+}
+
+.item {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: $radius-lg;
+  padding: 18px;
+  box-shadow: $card-shadow;
+}
+
+.icon {
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  background: rgba(37, 99, 235, 0.12);
+}
+
+.itemTitle {
+  margin-top: 12px;
+  font-weight: 700;
+}
+
+.itemText {
+  margin-top: 10px;
+  color: $color-muted;
+}
+
+.fade-in {
+  @include fade-in;
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+

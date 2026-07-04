@@ -1,7 +1,4 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
-
 ## Getting Started
-
 First, run the development server:
 
 ```bash
@@ -16,21 +13,81 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+# PrintCraft — онлайн-конструктор полиграфии
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Сборка макетов для печати визиток, флаеров, сертификатов и другой полиграфической продукции.
 
-## Learn More
+## Страницы приложения
 
-To learn more about Next.js, take a look at the following resources:
+### `/` — Главная
+- Презентация возможностей конструктора
+- Примеры продукции (визитки, флаеры, сертификаты)
+- Кнопка "Создать макет" (CTA)
+- Блок с преимуществами сервиса
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### `/auth/login` и `/auth/register` — Авторизация
+- Переключение между входом и регистрацией
+- Поля: email, пароль, имя (при регистрации)
+- После успешного входа — редирект на `/constructor`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### `/constructor` — Конструктор (основной инструмент)
+- Выбор типа продукции: визитка, флаер, сертификат и др.
+- Холст с возможностью добавления/редактирования элементов
+- Панель инструментов: текст, изображения, фигуры, фон
+- Предпросмотр и экспорт готового макета
+- Кнопка "Сохранить проект"
+- Query-параметры:
+  - `?template=id` — открыть конструктор с готовым шаблоном
+  - `?project=id` — продолжить редактирование сохранённого проекта
 
-## Deploy on Vercel
+### `/templates` — Галерея шаблонов
+- Каталог готовых шаблонов по категориям
+- Фильтр по типу продукции
+- Предпросмотр и выбор шаблона
+- При клике — переход в конструктор с выбранным шаблоном
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### `/my-projects` — Мои проекты
+- Список сохранённых макетов с превью
+- Возможность продолжить редактирование, удалить, дублировать
+- Доступно только авторизованным пользователям
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### `/pricing` — Тарифы (опционально)
+- Бесплатный тариф: базовый функционал, ограниченное количество проектов
+- Платный тариф: расширенные возможности, экспорт в высоком разрешении
+
+## Пользовательский сценарий
+
+1. Пользователь заходит на `/`
+2. Видит примеры продукции и возможности сервиса
+3. Нажимает "Создать макет"
+4. Если не авторизован → редирект на `/auth/login`
+5. После авторизации → переход в `/constructor`
+6. В конструкторе выбирает тип продукции
+7. Собирает макет: добавляет текст, изображения, меняет фон
+8. Сохраняет проект (автоматически или по кнопке)
+9. Сохранённые проекты доступны в `/my-projects`
+10. Может вернуться к редактированию в любой момент
+
+## Личный кабинет
+
+Отдельной страницы ЛК с настройками профиля **нет**. Вместо этого:
+- В хедере отображается иконка пользователя с выпадающим меню
+- Меню содержит: "Мои проекты" (ссылка на `/my-projects`), "Выйти"
+- Все проекты доступны на странице `/my-projects`
+
+## Технический стек
+
+- **Frontend**: Next.js (App Router), React, TypeScript
+- **UI**: Ant Design v5
+- **Архитектура**: Feature-Sliced Design (FSD)
+- **Холст/редактор**: Konva (React Konva)
+
+## План реализации
+
+1. [x] Главная страница
+2. [x] Авторизация (логин/регистрация)
+3. [ ] Конструктор (холст и базовые инструменты)
+4. [ ] Сохранение проектов
+5. [ ] Страница "Мои проекты"
+6. [ ] Галерея шаблонов
+7. [ ] Тарифы и монетизация

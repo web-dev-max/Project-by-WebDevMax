@@ -1,7 +1,21 @@
-import type { NextConfig } from "next";
+import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
-  /* config options here */
-};
+  // Konva использует canvas API, нужно чтобы работал на сервере при сборке
+  webpack: (config) => {
+    config.externals = [...(config.externals || []), { canvas: 'canvas' }]
+    return config
+  },
 
-export default nextConfig;
+  // Прокси на бэкенд (Nest.js), чтобы не мучиться с CORS при разработке
+  async rewrites() {
+    return [
+      {
+        source: '/api/:path*',
+        destination: 'http://localhost:4000/api/:path*',
+      },
+    ]
+  },
+}
+
+export default nextConfig

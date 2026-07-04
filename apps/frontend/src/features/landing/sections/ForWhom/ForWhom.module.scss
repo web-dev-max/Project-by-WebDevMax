@@ -1,0 +1,55 @@
+@import '../../../../styles/landing/variables';
+
+.section {
+  padding: 72px 0;
+}
+
+.container {
+  @include container;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 16px;
+}
+
+.lead {
+  text-align: center;
+  color: $color-muted;
+  max-width: 760px;
+  margin: 0 auto 40px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: $radius-lg;
+  padding: 20px;
+  box-shadow: $card-shadow;
+}
+
+.cardTitle {
+  font-weight: 700;
+}
+
+.cardText {
+  margin-top: 10px;
+  color: $color-muted;
+}
+
+.fade-in {
+  @include fade-in;
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+

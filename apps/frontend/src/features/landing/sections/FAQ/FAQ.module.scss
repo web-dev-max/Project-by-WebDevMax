@@ -1,0 +1,23 @@
+@import '../../../../styles/landing/variables';
+
+.section {
+  padding: 72px 0;
+}
+
+.container {
+  @include container;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 26px;
+}
+
+.collapse {
+  background: transparent;
+}
+
+.fade-in {
+  @include fade-in;
+}
+

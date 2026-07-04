@@ -1,0 +1,313 @@
+@import '../../../../styles/landing/variables';
+
+.hero {
+  padding: 40px 0;
+}
+
+.fade-in {
+  @include fade-in;
+}
+
+.container {
+  @include container;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.badges {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border-radius: 999px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  background: rgba(255, 255, 255, 0.8);
+  color: $color-text;
+}
+
+.badgeIcon {
+  font-size: 16px;
+  color: $color-accent;
+}
+
+title.title {
+  margin: 0;
+}
+
+title.title {
+  font-size: 56px;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+.title {
+  margin: 0;
+  font-size: 56px;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+}
+
+.subtitle {
+  margin: 0;
+  max-width: 520px;
+  color: $color-muted;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.ctaRow {
+  display: flex;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.ctaPrimary {
+  border-radius: $radius-md;
+}
+
+.ctaSecondary {
+  border-radius: $radius-md;
+}
+
+.perks {
+  display: flex;
+  gap: 22px;
+  flex-wrap: wrap;
+  margin-top: 6px;
+}
+
+.perk {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: $color-text;
+  font-size: 16px;
+}
+
+.perkDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: $color-accent;
+  box-shadow: 0 0 0 5px rgba(37, 99, 235, 0.12);
+}
+
+.right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.mockWrap {
+  width: 100%;
+  border-radius: $radius-lg;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  box-shadow: $card-shadow;
+  overflow: hidden;
+  background: #fff;
+}
+
+.mockTop {
+  padding: 18px 20px;
+  background: linear-gradient(180deg, #f7f9ff, #ffffff);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.mockDots {
+  display: flex;
+  gap: 8px;
+}
+
+.mockDots span {
+  width: 10px;
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.12);
+}
+
+.mockTitle {
+  margin: 0;
+}
+
+.mockBody {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 0;
+}
+
+.mockSidebar {
+  padding: 18px 14px;
+  border-right: 1px solid rgba(0, 0, 0, 0.06);
+  background: #fbfbff;
+}
+
+.sideSection {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 18px;
+}
+
+.sideLabel {
+  color: $color-muted;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.sideItem {
+  height: 12px;
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.06);
+}
+
+.sideIconRow {
+  display: flex;
+  gap: 10px;
+}
+
+.sideIcon {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.06);
+}
+
+.mockCanvas {
+  padding: 18px 18px;
+}
+
+.canvasHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.canvasLabel {
+  color: $color-muted;
+  font-size: 14px;
+}
+
+.canvasControls {
+  display: flex;
+  gap: 10px;
+}
+
+.controlPill {
+  width: 18px;
+  height: 18px;
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.06);
+}
+
+.canvasArea {
+  margin-top: 12px;
+}
+
+.paper {
+  border-radius: 14px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+}
+
+.paperBleed {
+  position: absolute;
+  inset: 0;
+  margin: 18px;
+  border: 1px dashed rgba(37, 99, 235, 0.35);
+  border-radius: 10px;
+}
+
+.paperGrid {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.06) 1px, transparent 1px);
+  background-size: 22px 22px;
+  opacity: 0.35;
+}
+
+.paperText {
+  position: absolute;
+  left: 22px;
+  top: 28px;
+  width: 60%;
+  height: 12px;
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.06);
+}
+
+.paperLogo {
+  position: absolute;
+  left: 22px;
+  bottom: 26px;
+  width: 140px;
+  height: 32px;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.06);
+}
+
+.mockBottom {
+  padding: 16px 18px;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  display: flex;
+  justify-content: space-between;
+}
+
+.mockBtn {
+  border-radius: $radius-md;
+}
+
+.mockBtnGhost {
+  border-radius: $radius-md;
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .right {
+    justify-content: flex-start;
+  }
+
+  .title {
+    font-size: 42px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 44px 0;
+  }
+
+  .title {
+    font-size: 34px;
+  }
+
+  .subtitle {
+    font-size: 16px;
+  }
+}
+

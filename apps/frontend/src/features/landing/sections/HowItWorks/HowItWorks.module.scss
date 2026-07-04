@@ -1,0 +1,65 @@
+@import '../../../../styles/landing/variables';
+
+.section {
+  padding: 30px 0;
+}
+
+.container {
+  @include container;
+}
+
+title.title {
+  margin: 0;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: $radius-lg;
+  padding: 22px;
+  box-shadow: $card-shadow;
+}
+
+.step {
+  width: 44px;
+  height: 44px;
+  border-radius: 16px;
+  background: rgba(37, 99, 235, 0.12);
+  color: $color-accent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.cardTitle {
+  margin-top: 14px;
+  font-weight: 700;
+}
+
+.cardText {
+  margin-top: 10px;
+  color: $color-muted;
+}
+
+.fade-in {
+  @include fade-in;
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+

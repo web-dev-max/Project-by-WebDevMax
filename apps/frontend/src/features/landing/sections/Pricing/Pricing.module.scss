@@ -1,0 +1,71 @@
+@import '../../../../styles/landing/variables';
+
+.section {
+  padding: 30px 0;
+}
+
+.container {
+  @include container;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.lead {
+  text-align: center;
+  color: $color-muted;
+  margin: 0 auto 42px;
+  max-width: 720px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  border-radius: $radius-lg;
+  padding: 20px;
+  box-shadow: $card-shadow;
+}
+
+.cardFeatured {
+  composes: card;
+  border-color: rgba(37, 99, 235, 0.35);
+}
+
+.planName {
+  font-weight: 700;
+}
+
+.price {
+  margin-top: 12px;
+  font-size: 34px;
+  font-weight: 800;
+}
+
+.list {
+  margin-top: 18px;
+  padding-left: 18px;
+  color: $color-muted;
+}
+
+.list li {
+  margin: 8px 0;
+}
+
+.fade-in {
+  @include fade-in;
+}
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}
+
